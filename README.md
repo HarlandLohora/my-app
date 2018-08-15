@@ -16,6 +16,7 @@ You will also see any lint errors in the console.
 2 - Mostrar el número del contador<br>
 3 - Integrar redux para mantener el estado del contador.<br>
 4 - Crear un Pull request a este repositorio con la implementación del ejercicio.<br>
+Nota: la carpeta html es para el ejercicio siguiente.
 
 Imagen del contador:
 
