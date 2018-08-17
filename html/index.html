@@ -1,32 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-      /* Your CSS Here */
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://www.pulsopyme.com/wp-content/uploads/2016/03/cuidamimascota.jpg" type="image/x-icon"/>
+  <title>Cuida mi mascota</title>
+  <style>
+
+      body{
+        margin        : 0;
+        padding       : 0;
+        color         : #fff;
+        text-align    : center;
+        vertical-align: middle;
+      }
+
+      /*Para dispositivos mayores a 600px*/
+      header{
+        width           : 100%;
+        background-color: #E52521;
+        text-align      : center;
+        height          : 5vh;
+      }
+      header div{
+        padding: 1.5vh;
+      }
+      aside{
+        background-color: #7A217D;
+        text-align      : center;
+        float           :left;
+        width           : 10vw;
+        height          : 90vh;
+      }
+      aside div{
+        padding-top: 45.5vh;
+      }
+      main{
+        background-color: #428ECC;
+        height          : 90vh;
+      }
+      footer{
+        background-color: #098136;
+        text-align      : center;
+        height          : 5vh;
+      }
+      footer div{
+        padding-top: 1.5vh;
+      }
+      .item{
+        background-color: #D8EAFA;
+        position: absolute;
+        color: #000
+      }
+      .item div{
+        position: absolute;
+        top     : 0;
+        bottom  : 0;
+        left    : 0;
+        right   : 0;
+        width   : 50%;
+        height  : 10%;
+        margin  : auto;
+        z-index : 1000;
+      }
+      .item-1{
+        top   : 7vh;
+        left  : 11vw;
+        width : 67vw;
+        height: 21vh;
+      }
+      .item-2{
+        top   : 29vh;
+        left  : 11vw;
+        width : 20vw;
+        height: 63vh;
+      }
+      .item-3{
+        top   : 29vh;
+        left  : 32vw;
+        width : 46vw;
+        height: 41vh;
+      }
+      .item-4{
+        top    : 7vh;
+        right  : 1vw;
+        z-index: 1;
+        width  : 20vw;
+        height : 63vh;
+      }
+      .item-5{
+        bottom: 8vh;
+        right : 1vw;
+        width : 67vw;
+        height: 21vh;
+
+      }
+
+
+
+      /*Estilos para dispositivos móviles o menores a 600px*/
+  @media only screen and (max-width: 600px) {
+      *{
+        font-size: 1.1em;
+       }
+      header {
+        height: 10vh;
+      }
+      header div{
+        padding: 3.5vh;
+      }
+      aside {
+        height: 10vh;
+        width : 100%;
+      }
+      aside div{
+        padding: 3.5vh;
+      }
+      footer {
+        height: 10vh;
+        width : 100%;
+      }
+      footer div{
+        padding-top: 3.5vh;
+      }
+      .item{
+        font-size: 0.9em;
+      }
+      .item-1{
+        top   : 21vh;
+        left  : 22vw;
+        width : 77vw;
+        height: 15vh;
+      }
+      .item-2{
+        top   : 21vh;
+        left  : 1vw;
+        width : 20vw;
+        height: 62vh;
+      }
+      .item-3{
+        top   : 37vh;
+        left  : 22vw;
+        width : 56vw;
+        height: 46vh;
+      }
+      .item-4{
+        top   : 37vh;
+        right : 1vw;
+        width : 20vw;
+        height: 62vh;
+      }
+      .item-5{
+        bottom: 1vh;
+        left  : 1vw;
+        width : 77vw;
+        height: 15vh;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    HEADER
+    <div>HEADER</div>
   </header>
   <div class="content">
     <aside>
-      ASIDE
+      <div>ASIDE</div>
     </aside>
     <main>
-      <div class="item item-1">Item 1</div>
-      <div class="item item-2">Item 2</div>
-      <div class="item item-3">Item 3</div>
-      <div class="item item-4">Item 4</div>
-      <div class="item item-5">Item 5</div>
+      <div class="item item-1"><div>Item 1</div></div>
+      <div class="item item-2"><div>Item 2</div></div>
+      <div class="item item-3"><div>Item 3</div></div>
+      <div class="item item-4"><div>Item 4</div></div>
+      <div class="item item-5"><div>Item 5</div></div>
     </main>
   </div>
   <footer>
-    FOOTER
+    <div>FOOTER</div>
   </footer>
 </body>
 </html>
