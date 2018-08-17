@@ -1,21 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect }          from 'react-redux';
 
-class App extends Component {
+import './index.css'
+
+class Contador extends Component {
+  sumar = () => {
+    this.props.dispatch({ type: 'sumar' });
+  }
+
+  restar = () => {
+    this.props.dispatch({ type: 'restar' });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container my-5">
+        <h3 className="text-center">Contador con REDUX</h3>
+        <div className="row">
+          <div className="col col-md-4 offset-md-5 my-3">
+            <button onClick={this.sumar} className="btn btn-outline-success"><i className="fa fa-plus"></i><span> </span>Suma</button>
+            <span> </span>
+            <button onClick={this.restar} className="btn btn-outline-danger"><i className="fa fa-minus"></i><span> </span>Resta</button>
+            <h4 className="my-3 mx-4">Contador: {this.props.cuenta}</h4>
+          </div>
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+function stateProps(state) {
+  return {
+    cuenta: state.cuenta
+  };
+}
+
+export default connect(stateProps)(Contador);
